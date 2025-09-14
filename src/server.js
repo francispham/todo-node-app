@@ -21,6 +21,10 @@ app.get("/", (_, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+/* ROUTES */
+//? Auth Routes
+app.use("/auth", authRoutes);
+
 app.listen(PORT, () => {
   console.log(`Server has started on port: ${PORT}`);
 });
