@@ -31,4 +31,13 @@ docker compose run app npx prisma migrate dev --name init
 
 # Boost up Docker containers
 docker compose up
+
+# Login to docker PostgreSQL database (from a new terminal instance while docker containers are running) where you can run SQL commands and modify database!:
+docker exec -it postgres-db psql -U postgres -d todoapp
+
+# Stop Docker container
+docker compose down
+
+# Delete all Docker containers
+docker system prune
 ```
